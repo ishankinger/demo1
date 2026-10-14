@@ -1,0 +1,20 @@
+# Starter configuration. Tune these thresholds to the assignment dataset and rules.
+required_fields:
+  - invoice_number
+  - invoice_date
+  - vendor_name
+  - currency
+  - total_amount
+
+tolerances:
+  quantity_percent: 0.0
+  unit_price_percent: 2.0
+  total_amount_percent: 1.0
+
+recommendation_thresholds:
+  approve_max_severity: low
+  reject_min_severity: high
+
+rag:
+  reflection_average_threshold: 0.7
+  max_retries: 3
